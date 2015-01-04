@@ -19,7 +19,7 @@
 #include <stdint.h>
 #include <stddef.h>
 
-#ifdef __APPLE__
+#if defined(__APPLE__) && !defined(USE_MACPORTS_LIBUNWIND)
   #if __clang__
     #if __has_include(<Availability.h>)
       #include <Availability.h>
