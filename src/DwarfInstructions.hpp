@@ -72,7 +72,9 @@ private:
       return evaluateExpression((pint_t)prolog.cfaExpression, addressSpace, 
                                 registers, 0);
     assert(0 && "getCFA(): unknown location");
-    __builtin_unreachable();
+    // __builtin_unreachable() is more appropriate but is only available on gcc-4.5 and newer.
+    // __builtin_trap() is better than an ifdef mess for something that will never run anyways.
+    __builtin_trap();
   }
 };
 
