@@ -30,6 +30,7 @@
 #include "DwarfInstructions.hpp"
 #include "EHHeaderParser.hpp"
 #include "libunwind.h"
+#include "libunwind_ext.h"
 #include "Registers.hpp"
 #include "RWMutex.hpp"
 #include "Unwind-EHABI.h"
