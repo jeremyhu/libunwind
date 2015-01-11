@@ -22,7 +22,7 @@
 #include "Registers.hpp"
 #include "DwarfParser.hpp"
 #include "config.h"
-
+#include "libunwind_ext.h"
 
 namespace libunwind {
 
