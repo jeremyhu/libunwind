@@ -29,7 +29,14 @@
 
 // Platform specific configuration defines.
 #ifdef __APPLE__
-  #include <Availability.h>
+  #if __clang__
+    #if __has_include(<Availability.h>)
+      #include <Availability.h>
+    #endif
+  #elif __ENVIRONMENT_MAC_OS_X_VERSION_MIN_REQUIRED__ >= 1050
+    #include <Availability.h>
+  #endif
+
   #ifdef __cplusplus
     extern "C" {
   #endif
